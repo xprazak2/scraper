@@ -1,24 +1,15 @@
-# README
+# Scraper
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Scrapes data from pages
 
-Things you may want to cover:
+## Quickstart
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+bundle install
+```
+```
+rails s 
+```
+```
+curl -X GET -H "Content-Type: application/json"  http://localhost:3000/data  -d '{"url": "https://github.com/freerange/mocha", "fields": { "nav": ".sr-only", "meta": ["octolytics-url"]}}'
+```
